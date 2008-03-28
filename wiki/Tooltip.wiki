@@ -1,8 +1,6 @@
 #summary Tooltip plugin
 #labels Featured,Phase-Implementation
 
-= Tooltip plugin =
-
 == Introduction ==
 
 *Tooltip* is a [http://www.jquery.com jQuery] plugin to add simple tooltip support to your web development.
