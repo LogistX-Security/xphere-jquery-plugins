@@ -132,16 +132,17 @@ Remember that you can change the tooltip class with the 'class' option.
 
 Tooltip plugin can take advantage if the [http://plugins.jquery.com/project/metadata Metadata] plugin is loaded.
 
-{{{
 HTML markup:
-
+{{{
 ...
 <a class="{tooltip: {title: 'This is a LINK'}}" href="link1.html">link 1</a>
 <a class="{tooltip: {text: 'This is another LINK'}}" href="link2.html">link 2</a>
 <a class="{tooltip: {smart: true, in:2000}}" href="link3.html">link 3</a>
 ...
+}}}
 
 JS code:
+{{{
 ...
 $('a').tooltip();
 ...
