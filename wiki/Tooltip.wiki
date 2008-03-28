@@ -87,3 +87,64 @@ You can change default behaviour with the `$.tooltip.setup({options})` function.
 
   * === track _(default: true)_ ===
   If true, the tooltip container will follow the mouse when moving.
+
+== How to CSS ==
+
+By default, the tooltip container is marked with a 'tooltip' class.
+
+The content is added in three different <div>'s, marked as 'title', 'text' and 'url' classes.
+
+So, a common CSS for tooltip could be:
+
+{{{
+.tooltip {
+  background-color:#FFF;
+  border:1px solid #000;
+}
+
+.tooltip .title {
+  background-color:#000;
+  border-bottom:1px solid #FFF;
+  font-size:x-small;
+  font-weight:bold;
+  text-align:center;
+  padding:.5ex 2ex;
+}
+
+.tooltip .text,
+.tooltip .url {
+  padding:.4ex .7ex .2ex;
+  font-size:xx-small;
+}
+
+.tooltip .url {
+  font-weight:bold;
+}
+
+.tooltip .url:before {
+  content: 'url: ';
+}
+}}}
+
+Remember that you can change the tooltip class with the 'class' option.
+
+== Advanced features ==
+
+Tooltip plugin can take advantage if the [http://plugins.jquery.com/project/metadata Metadata] plugin is loaded.
+
+{{{
+HTML markup:
+
+...
+<a class="{tooltip: {title: 'This is a LINK'}}" href="link1.html">link 1</a>
+<a class="{tooltip: {text: 'This is another LINK'}}" href="link2.html">link 2</a>
+<a class="{tooltip: {smart: true, in:2000}}" href="link3.html">link 3</a>
+...
+
+JS code:
+...
+$('a').tooltip();
+...
+}}}
+
+As easy as this!
