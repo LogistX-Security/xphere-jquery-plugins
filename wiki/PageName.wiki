@@ -1,6 +1,6 @@
 #summary Converts simple swf links into embedded objects
 
-= Introduction =
+= swfLink =
 
 {{{
 function  swfLink(url, elm, opts, parms) {
@@ -41,4 +41,4 @@ function  swfLink(url, elm, opts, parms) {
 
 All code released under GPLv3 unless otherwise stated.
 
-[swfLink.js Download swfLink as a file]
+[http://xphere-jquery-plugins.googlecode.com/files/swfLink.js Download swfLink as a file]
