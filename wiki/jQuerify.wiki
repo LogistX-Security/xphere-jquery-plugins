@@ -1,0 +1,10 @@
+#summary Load jQuery in any page
+#labels Featured
+
+= jQuerify =
+
+This bookmarklet adds jQuery to the site you're currently browsing
+
+Drag and drop the next link into your bookmarks and let jQuerify do the work!
+
+<a href="javascript:(function(){if(typeof%20window.jQuery!='undefined'){f('jQuery%20already%20loaded')}else{var%20c=typeof%20window.$!='undefined';var%20d=document.createElement('script');var%20e=15;d.setAttribute('src','http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');(function(){if(typeof%20window.jQuery=='undefined'){if(--e%3E0){window.setTimeout(arguments.callee,250)}else{alert('An%20error%20ocurred%20while%20loading%20jQuery')}}else{f('jQuery%20'+jQuery.fn.jquery+'%20loaded'+(c%26%26jQuery.noConflict()%3F'%20with%20noConflict':''))}})();document.getElementsByTagName('head')[0].appendChild(d)}function%20f(a){var%20b=jQuery('%3Ca%3E').html(a).attr('href','#').css({opacity:0.9,position:'fixed',zIndex:9000,top:'15px',right:'20px',background:'#000','float':'right',padding:'7px%2010px',color:'#fff',border:'solid%202px%20#fff',textDecoration:'none',textAlign:'center',font:'12px%20%22Lucida%20Grande%22,Helvetica,Tahoma%20bold',borderRadius:'5px',MozBorderRadius:'5px',MozBoxShadow:'0%200%2020px%20#000',WebkitBorderRadius:'5px',WebkitBoxShadow:'0%200%2020px%20#000'}).click(function(z){z.preventDefault();jQuery(this).fadeOut('slow',function(){jQuery(this).remove()})}).appendTo('body');window.setTimeout(function(){b.trigger('click')},2500)}})()">xPheRe jQuerify</a>
