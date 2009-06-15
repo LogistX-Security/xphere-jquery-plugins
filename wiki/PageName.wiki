@@ -1,0 +1,44 @@
+#summary Converts simple swf links into embedded objects
+
+= Introduction =
+
+{{{
+function  swfLink(url, elm, opts, parms) {
+	// Default values
+  opts = opts || {};
+  parms = parms || {};
+  !opts.type && (opts.type = 'application/x-shockwave-flash');
+  !parms.allowscriptaccess && (parms.allowscriptaccess = 'always');
+  !parms.wmode && (parms.wmode = 'transparent');
+  // Checks for IE
+  if(!+"\v1") {
+    opts.classid = 'clsid:D27CDB6E-AE6D-11cf-96B8-444553540000';
+		// Split URL onto movie and flashvars params
+    url = url.split('?');
+    parms.movie = url[0];
+    url[1] && (parms.flashvars = url[1]);
+  } else {
+    opts.data = url;
+  }
+  var result = ['&lt;object'];
+	// Add options as object attributes
+  for(var idx in opts) {
+    result.push(' ', idx, '="', opts[idx], '"');
+  }
+  result.push('&gt;');
+	// Add params
+  for(var idx in parms) {
+    result.push('&lt;param name="', idx, '" value="', parms[idx], '"/&gt;');
+  }
+  result.push(elm.innerHTML, '&lt;/object&gt;');
+  var cont = document.createElement('div');
+  cont.innerHTML = result.join('');
+	// Replace source link with embedded object
+  elm.parentNode.replaceChild(result = cont.firstChild, elm);
+  return result
+}
+}}}
+
+All code released under GPLv3 unless otherwise stated.
+
+[swfLink.js Download swfLink as a file]
