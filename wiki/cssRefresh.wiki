@@ -1,0 +1,14 @@
+#summary Reload all CSS links of a website with one click
+#labels Featured
+
+= CSS Refresh =
+
+CSS Refresh is a bookmarklet that reloads all CSS link tags within the current website.
+
+It's really helpful while developing a website and making minor changes to CSS, thus avoiding to reload the whole site. It only works if you made no changes to the markup, of course.
+
+In order to use it, you must drag and drop into your browser's favlist or copy-paste it.
+
+The next link will redirect you to my blog, where you can drag & drop it.
+
+[http://coder-zone.blogspot.com/2009/06/css-refresh.html#download-xphere-css-refresh-v01 CSS Refresh Bookmarklet]
